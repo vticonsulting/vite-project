@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIC Form</title>
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <style>
+        body {
+            padding: 2rem;
+            font-size: 12px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th,
+        td {
+            vertical-align: middle;
+            border: 1px solid black;
+            /* padding: 0.25rem .5rem; */
+            /* background-color: #BFD3ED; */
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        input[type=text] {
+            width: 100%;
+            /* background-color: #BFD3ED; */
+            border: none;
+            text-align: left;
+            padding: 0 0 0 .25rem;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .borderless {
+            border: none;
+        }
+
+        .font-normal {
+            font-weight: 400;
+        }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="max-w-3xl">
+
+        <table class="border table">
+            <thead>
+                <tr>
+                    <th class="bg-blue-200" colspan="4">
+                        <h2>TEXAS HOME INSPECTION CHECKLIST</h2>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center" colspan="4">
+                        Type of inspection:
+                        <input type="radio" name="inspectionType" id="inspection-type-initial">
+                        <label for="inspection-type-initial">Initial</label>
+
+                        <input type="radio" name="inspectionType" id="inspection-type-subsequent">
+                        <label for="inspection-type-subsequent">Subsequent</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="insured-name">Insured Name:</label>
+                        <input type="text" name="insuredName" id="insured-name">
+                    </td>
+                    <td>
+                        <label for="claim-number">
+                            Claim #:
+                        </label>
+                        <input type="text" name="claimNumber" id="claim-number">
+                    </td>
+                    <td>
+                        <label for="loss-date">
+                            Date of Loss:
+                        </label>
+                        <input type="text" name="" id="loss-date">
+                    </td>
+                    <td>
+                        <label for="inspection-date">
+                            Date of Inspection:
+                        </label>
+                        <input type="text" name="" id="inspection-date">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="loss-location">
+                            Loss Location:
+                        </label>
+                        <input type="text" name="" id="loss-location">
+                    </td>
+                    <td>
+                        <label for="">
+                            City:
+                        </label>
+                        <input type="text" name="" id="">
+                    </td>
+                    <td>
+                        <label for="">
+                            State:
+                        </label>
+                        <input type="text" name="" id="">
+                    </td>
+                    <td>
+                        <label for="">
+                            ZIP Code:
+                        </label>
+                        <input type="text" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="">Email Address:</label>
+                        <input type="text" name="" id="">
+                    </td>
+                    <td class="text-center" colspan="2">
+                        <label style="display: block">Insured on premises for inspection:</label>
+                        <input type="radio" name="" id="">
+                        Yes
+                        <input type="radio" name="" id="">
+                        No
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <label for="" style="display: block">Any others present? (If yes list name and role, e.g., “John
+                            Smith, Contractor”):</label>
+                        <input type="text" name="" id="">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Please complete the interior and exterior checklists, indicating “Yes” if the item/area has damage then use
+            the “Notes” section to describe any pre-existing or non-related damage. Indicate “No” if there is no damage
+            to the item/area. Mark “N/A” if the area does not exist.
+        </p>
+
+        <table class="border table">
+            <thead>
+                <tr>
+                    <th class="bg-blue-200" colspan="6">
+                        <h2>EXTERIOR</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="3">Inspection Damage</th>
+                    <th rowspan="2">Notes (Include date and whether repairs were completed; please be concise)</th>
+                </tr>
+                <tr>
+                    <th>Area/Item</th>
+                    <th>Yes</th>
+                    <th>No</th>
+                    <th>N/A</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Roof</td>
+                    <td class="text-center"><input type="radio" name="roof" id=""> </td>
+                    <td class="text-center"><input type="radio" name="roof" id=""></td>
+                    <td class="text-center"><input type="radio" name="roof" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Siding (if “Yes” indicate elevation)</td>
+                    <td class="text-center"><input type="radio" name="siding" id=""> </td>
+                    <td class="text-center"><input type="radio" name="siding" id=""></td>
+                    <td class="text-center"><input type="radio" name="siding" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Gutters/Downspouts</td>
+                    <td class="text-center"><input type="radio" name="gutters" id=""> </td>
+                    <td class="text-center"><input type="radio" name="gutters" id=""></td>
+                    <td class="text-center"><input type="radio" name="gutters" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Windows</td>
+                    <td class="text-center"><input type="radio" name="windows" id=""> </td>
+                    <td class="text-center"><input type="radio" name="windows" id=""></td>
+                    <td class="text-center"><input type="radio" name="windows" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Screens</td>
+                    <td class="text-center"><input type="radio" name="screens" id=""> </td>
+                    <td class="text-center"><input type="radio" name="screens" id=""></td>
+                    <td class="text-center"><input type="radio" name="screens" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Doors</td>
+                    <td class="text-center"><input type="radio" name="doors" id=""> </td>
+                    <td class="text-center"><input type="radio" name="doors" id=""></td>
+                    <td class="text-center"><input type="radio" name="doors" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Patio</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Patio Covering</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Garage</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Carport</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Pool Enclosure</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>A/C Unit</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Deck</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Shed/Outbuilding</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Fence</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Mailbox</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="text-center"><input type="checkbox" name="" id="">Check here if the
+                        inspection area/item list is
+                        continued below in “Additional Entries” section.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="mt-4 table">
+            <thead>
+                <tr>
+                    <th class="bg-blue-200" colspan="5">
+                        <h2>INTERIOR</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="5">
+                        <table class="w-full">
+                            <tr>
+                                <td class="font-normal text-left borderless">
+                                    The customer/representative refused inspection of all or part of the interior
+                                    property at this time,
+                                    confirming that there is no interior damage due to the reported loss except as
+                                    specified below (Sign
+                                    below, page 3).
+                                </td>
+                                <td class="font-normal text-left borderless">
+                                    The customer/representative refused inspection of all or part of the interior
+                                    property at this time,
+                                    confirming that there is
+                                    no new or additional interior damage due to the reported loss since the last
+                                    inspection except as specified
+                                    below (Sign
+                                    below, page 3).
+                                </td>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th colspan="3">Inspection Damage</th>
+                    <th rowspan="2">Notes (Include date and whether repairs were completed; please be concise)</th>
+                </tr>
+                <tr>
+                    <th>Area/Item</th>
+                    <th>Yes</th>
+                    <th>No</th>
+                    <th>N/A</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Living Room</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Family Room</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Dining Room</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Kitchen</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Breakfast Area</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Pantry</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Foyer</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Game Room</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Office/Study</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Hall</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Hall Closet</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Utility Room</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Garage</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Attic</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Crawlspace</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Basement</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Master Bedrm</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>MBR Closet</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Bedroom 2</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>BR2 Closet</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Bedroom 3</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>BR3 Closet</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Bedroom 4</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>BR4 Closet</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Master Bath</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Bathroom 2</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Bathroom 3</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Contents</td>
+                    <td class="text-center"><input type="radio" name="" id=""> </td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td class="text-center"><input type="radio" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        Check here if the inspection area/item list is continued below in “Additional Entries” section.
+        ADDITIONAL ENTRIES
+        Inspection
+        Damage Location
+        Notes (Include date and whether repairs were completed; please be concise)
+        Area/Item Yes No N/A INT EXT
+        Insured/Representative Initials: Claim #: Page 2 of 3
+        Any person who knowingly presents a false or fraudulent claim for the payment of a loss is guilty of a crime
+        and may be
+        subject to fines and confinement in state
+        prison. Home Inspection Checklist 041015 GHRN. © Allstate Insurance Company
+        ADDITIONAL ENTRIES (CONTINUED)
+        Inspection
+        Damage Location
+        Notes (Include date and whether repairs were completed; please be concise)
+        Area/Item Yes No N/A INT EXT
+
+        <h2>SIGNATURES</h2>
+
+        An indication on this form that an item is or is not damaged, is not an indication or representation as to
+        whether there is insurance
+        coverage for that damage. All claims are subject to the terms and conditions of the insurance policy. All
+        coverage
+        determinations
+        will be made by your Allstate Adjuster.
+        Interior Inspected: Yes No Refused Exterior Inspected: Yes No Refused
+        Insured/Representative Name (Print): Date:
+        Insured/Representative Signature:
+        Printed Name of Person Completing
+        the Form for the Insurer:
+        Date:
+        Signature of Person Completing
+        the Form for the Insurer:
+
+        <h2>COPY PROVIDED TO CUSTOMER</h2>
+
+        A completed copy of this document was provided to the customer via:
+        email
+        print
+        both
+
+        Claim #:
+        Page 3 of 3
+
+
+        <p>Any person who knowingly presents a false or fraudulent claim for the payment of a loss is guilty of a
+            crime and may
+            be subject to fines and confinement in state prison. Home Inspection Checklist 041015 GHRN. © Allstate
+            Insurance
+            Company</p>
+    </div>
+</body>
+
+</html>
