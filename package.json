@@ -7,9 +7,12 @@
     "build:watch": "vite build --watch",
     "serve": "vite preview"
   },
+  "dependencies":{
+    "@designcode/border": "1.1.0"
+  },
   "devDependencies": {
     "postcss-nested": "^5.0.6",
     "sass": "^1.41.1",
-    "vite": "^2.5.4"
+    "vite": "^2.5.10"
   }
 }

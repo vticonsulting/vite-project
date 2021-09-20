@@ -2,6 +2,13 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+    css: {
+        preprocessorOptions: {
+            scss: {
+                outputStyle: 'expanded'
+            }
+        }
+    },
     server: {
         host: 'foo.test',
         port: '4000',
